@@ -1,0 +1,508 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Базовые стили для заголовков и абзацев */
+h1, h2, h3, h4, h5, h6, hr, p, figure {
+    display: block;
+    font-size: 1em;
+    font-weight: normal;
+    margin: 0;
+    border-width: 0;
+    opacity: 1;
+}
+
+/* Стили для иконок */
+.material-symbols-outlined {
+    font-family: 'Material Symbols Outlined';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Утилитарные классы */
+.flexRowProductDetails {
+    display: flex;
+    flex-direction: row;
+}
+
+.color_image {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 2px;
+    background-clip: content-box;
+
+    &.active {
+        border: 2px solid black;
+    }
+}
+
+/* Стили для хедера */
+.header {
+    display: flex;
+    flex-direction: column;
+}
+
+.front-page-header {
+    display: flex;
+    flex-direction: column;
+    gap: 22px 0;
+    margin: 23px auto 53px;
+    width: 80.56%;
+}
+
+.header-menu-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-menu-cont {
+    display: flex;
+    justify-content: space-between;
+    width: 276px;
+}
+
+.catalogText,
+.designersText,
+.brandsText {
+    min-width: 0;
+    font: 501 15px/1.29 'TT Norms', sans-serif;
+    color: #141414;
+    letter-spacing: 0.14px;
+    transition: color 0.3s ease;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    &:hover {
+        color: #14141480;
+    }
+}
+
+.catalogImage {
+    width: 180px;
+}
+
+.header-contact-wrapper {
+    display: flex;
+    gap: 0 19px;
+    width: 299px;
+}
+
+.contactPhoneNumber {
+    margin-top: 2px;
+    font: 400 14px/1.29 "IBM Plex Sans", Helvetica, Arial, serif;
+    color: #585858;
+    letter-spacing: 0.14px;
+    transition: color 0.3s ease;
+    cursor: pointer;
+
+    &:hover {
+        color: #DDAF31;
+    }
+}
+
+.contactEmail {
+    margin-top: 2px;
+    font: 400 14px/1.29 "IBM Plex Sans", Helvetica, Arial, serif;
+    color: #585858;
+    letter-spacing: 0.14px;
+}
+
+.shopping-cart-img {
+    width: 20px;
+    height: 20px;
+    filter: none;
+    transition: filter 0.3s ease;
+    cursor: pointer;
+
+    &:hover {
+        filter: brightness(0) saturate(100%) invert(63%) sepia(57%) saturate(655%) hue-rotate(6deg) brightness(104%) contrast(101%);
+    }
+}
+
+.dividerLine {
+    height: 1px;
+    min-height: 1px;
+    background-color: #141414;
+}
+
+/* Стили для каталога */
+.catalog {
+    display: flex;
+    flex-direction: column;
+}
+
+.catalog-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px 0;
+    margin: 27px 9.72% 58px;
+}
+
+.catalog-cont-title {
+    display: flex;
+    justify-content: space-between;
+    width: 329px;
+}
+
+.allProductsTitle {
+    font: 500 35px/1.29 'TT Norms', sans-serif;
+    color: #141414;
+    letter-spacing: 0.36px;
+    text-transform: uppercase;
+}
+
+.product-count-box {
+    margin: 20px 0 7px;
+}
+
+.text-count-box {
+    font: 500 14px/1.29 "IBM Plex Sans", Helvetica, Arial, serif;
+    color: black;
+    text-align: right;
+    letter-spacing: 0.14px;
+}
+
+.text-span-1,
+.text-span-3 {
+    font: 500 1em/1.29 "TT Norms", Helvetica, Arial, serif;
+    color: gray;
+}
+
+.text-span-2,
+.productCount {
+    font: 500 1em/1.29 "TT Norms", Helvetica, Arial, serif;
+    color: #ddaf30;
+}
+
+.flex-column-products {
+    display: flex;
+    flex-direction: column;
+    gap: 40px 0;
+    flex-wrap: wrap;
+}
+
+.flex-row-filter-tiles {
+    display: flex;
+    gap: 0 10px;
+}
+
+.brand-tile-container {
+    position: relative;
+    width: 102px;
+    min-height: 32px;
+}
+
+.brand-tile-name-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    width: 102px;
+    height: 32px;
+    background-color: #585858;
+    outline: 1px solid #585858;
+    outline-offset: -1px;
+}
+
+.brand-tile-name {
+    display: flex;
+    flex-direction: column;
+    margin: 7px 17px 6px 10px;
+    background-color: #585858;
+}
+
+.productBrandName {
+    margin-right: 15px;
+    font: 400 14px/1.29 "IBM Plex Sans", Helvetica, Arial, serif;
+    color: white;
+    letter-spacing: 0.14px;
+}
+
+.color-tile-container {
+    position: relative;
+    width: 86px;
+    min-height: 32px;
+}
+
+.color-tile-name-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    width: 86px;
+    height: 32px;
+    background-color: #585858;
+    outline: 1px solid #585858;
+    outline-offset: -1px;
+}
+
+.color-tile-name {
+    display: flex;
+    flex-direction: column;
+    margin: 7px 10px 6px;
+    background-color: #585858;
+}
+
+.colorText {
+    margin-right: 15px;
+    font: 400 14px/1.29 "IBM Plex Sans", Helvetica, Arial, serif;
+    color: white;
+    letter-spacing: 0.14px;
+}
+
+.image-close-button {
+    cursor: pointer;
+    position: absolute;
+    top: 12px;
+    right: 11px;
+    width: 11px;
+    height: 11px;
+}
+
+.flex-row-filter-products {
+    display: flex;
+    gap: 0 1px;
+    align-items: flex-start;
+}
+
+.filter-container {
+    width: 290px;
+    background-color: #f7f5f3;
+}
+
+.filter-buttons-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px 0;
+    margin: 30px 0 918px 30px;
+}
+
+.filter-color-buttons-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px 0;
+}
+
+.colorTitle {
+    font: 700 16px/1.29 "IBM Plex Sans", Helvetica, Arial, serif;
+    color: #585858;
+    letter-spacing: 0.16px;
+    text-transform: uppercase;
+}
+
+.flex-row-color-buttons {
+    display: flex;
+    gap: 0 8px;
+}
+
+.flex-row-products-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 колонки */
+}
+
+.image2 {
+    width: 18px;
+    height: 18px;
+}
+
+.filter-brand-buttons-container {
+    display: flex;
+    flex-direction: column;
+    gap: 14px 0;
+}
+
+.brandTitle {
+    margin: 0 33px 0 0;
+    font: 700 16px/1.29 "IBM Plex Sans", Helvetica, Arial, serif;
+    color: #585858;
+    letter-spacing: 0.16px;
+    text-transform: uppercase;
+}
+
+.flex-column-brands-list {
+    display: flex;
+    flex-direction: column;
+    gap: 5px 0;
+}
+
+.brandTextA,
+.brandTextB {
+    font: 500 14px/1.29 "IBM Plex Sans", Helvetica, Arial, serif;
+    color: #585858;
+    letter-spacing: 0.14px;
+}
+
+.flex-row-brand-a-buttons,
+.flex-row-brand-b-buttons,
+.flex-row-brand-c-buttons,
+.flex-row-brand-d-buttons {
+    display: flex;
+    gap: 0 7px;
+}
+
+.brandLogoA {
+    margin: 2px 0;
+    width: 15px;
+    height: 15px;
+}
+
+.brandNameA,
+.brandNameB,
+.brandNameC,
+.brandNameD {
+    font: 400 14px/1.29 "IBM Plex Sans", Helvetica, Arial, serif;
+    color: #585858;
+    letter-spacing: 0.14px;
+}
+
+.brandCheckbox,
+.brandPlaceholderD {
+    margin: 3px 0;
+    width: 13px;
+    min-height: 13px;
+    outline: 1px solid #e0e0e0;
+    outline-offset: -1px;
+}
+
+/* Стили для карточки товара */
+.product-content-box {
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    width: 291px;
+    outline: 1px solid #e0e0e0;
+    outline-offset: -1px;
+
+    &:hover .productDescription,
+    &:hover .productPrice {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    &:hover .colorImage {
+        display: block;
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.flex-сolumn-information {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 19px 19px;
+}
+
+.flex-row-status {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.statusTiles {
+    margin-right: 130px;
+    display: flex;
+    justify-content: center;
+    min-width: 44px;
+    font: 400 12px/1.29 "IBM Plex Sans", Helvetica, Arial, serif;
+    color: white;
+    text-align: center;
+    background-color: #585858;
+    padding: 3px 4px;
+    letter-spacing: 0.12px;
+}
+
+.favoriteImage {
+    margin-left: auto;
+    margin: 3px 0 2px;
+    width: 19px;
+    height: 17px;
+}
+
+img.image3d {
+    width: 26px;
+    height: 22px;
+}
+
+.flex-column-name {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+}
+
+.featuredProductImage {
+    width: 100%;
+}
+
+.featuredProductBrand {
+    margin-top: 3px;
+    font: 700 14px/1.29 "IBM Plex Sans", Helvetica, Arial, serif;
+    color: #141414;
+    text-transform: uppercase;
+    letter-spacing: 0.14px;
+}
+
+.featuredProductTitle {
+    margin-top: 4px;
+    font: 500 14px/1.29 "IBM Plex Sans", Helvetica, Arial, serif;
+    color: #ddaf31;
+    text-transform: uppercase;
+    letter-spacing: 0.14px;
+}
+
+.flex-column-specs {
+    display: flex;
+    position: relative;
+    transition: all 0.3s ease;
+    justify-content: space-between;
+    margin-top: 9px;
+}
+
+.colorImage {
+    position: absolute;
+    display: none;
+    width: 18px;
+    height: 18px;
+    margin-top: 10px;
+}
+
+.productDescription {
+    width: 78px;
+    font: 400 14px/1.29 "IBM Plex Sans", Helvetica, Arial, serif;
+    color: #585858;
+    letter-spacing: 0.14px;
+}
+
+.productPrice {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 18px;
+    font: 400 14px/1.29 "IBM Plex Sans", Helvetica, Arial, serif;
+    color: #585858;
+    text-align: right;
+    letter-spacing: 0.14px;
+}
