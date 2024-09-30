@@ -1,3 +1,3 @@
 # test-tasks
 
-Проект лежит в папке develop
+Проект лежит в ветке develop
