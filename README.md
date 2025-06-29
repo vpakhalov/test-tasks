@@ -12,4 +12,4 @@
 3. `php artisan migrate`
 4. `php artisan BD` - чтобы заполнить информацией БД.
 5. `php artisan serve`.
-6. перейти по роуту `/catalog`.
+6. Перейти по роуту `/catalog`.
